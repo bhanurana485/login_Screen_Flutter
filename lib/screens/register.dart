@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uilogin/components/background.dart';
+import 'package:uilogin/screens/home.dart';
 
 class RegisterScreen extends StatefulWidget {
   @override
@@ -70,6 +71,23 @@ class _RegisterState extends State<RegisterScreen> {
                 child: Text("Register", style: TextStyle(color: Colors.white)),
               ),
             ),
+            Container(
+              alignment: Alignment.centerRight,
+              margin: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+              child: GestureDetector(
+                onTap: () => {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomeScreen()))
+                },
+                child: Text(
+                  "Play video",
+                  style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFF2661FA)),
+                ),
+              ),
+            )
           ],
         ),
       ),
